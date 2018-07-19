@@ -3,29 +3,29 @@ Mysql on minikube
 
 Pre-requisites
 ----
-# minikube
-# mysql-deployment.yaml
+* minikube
+* mysql-deployment.yaml
 
 Steps
 ----
 
-# Create secret
+1. Create secret
 ```
 kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
 ```
-# Verify
+2. Verify
 ```
 kubectl get secrets
 ```
-# Deploy mysql
+3. Deploy mysql
 ```
 kubectl create -f https://k8s.io/examples/application/wordpress/mysql-deployment.yaml
 ```
-# Verify PVs
+4. Verify PVs
 ```
 kubectl get pvc
 ```
-# Verify mysql
+5. Verify mysql
 ```
 kubectl get pods
 ```
@@ -33,7 +33,7 @@ kubectl get pods
 Clean up
 ----
 
-# kubectl delete secret mysql-pass
-# kubectl delete deployment -l app=fooapp
-# kubectl delete service -l app=fooapp
-# kubectl delete pvc -l app=fooapp
+* kubectl delete secret mysql-pass
+* kubectl delete deployment -l app=fooapp
+* kubectl delete service -l app=fooapp
+* kubectl delete pvc -l app=fooapp

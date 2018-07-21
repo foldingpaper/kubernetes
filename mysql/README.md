@@ -37,3 +37,12 @@ Clean up
 * kubectl delete deployment -l app=fooapp
 * kubectl delete service -l app=fooapp
 * kubectl delete pvc -l app=fooapp
+
+Using Helm
+====
+If you have helm installed, helm makes it even easier
+```
+$ helm repo update              # Make sure we get the latest list of charts
+$ helm install stable/mysql
+Released smiling-penguin
+```
